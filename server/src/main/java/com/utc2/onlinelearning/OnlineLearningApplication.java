@@ -1,6 +1,3 @@
-/*
- * Copyright (c) 2021. Davis Tibbz.  MIT License. Github: https://github.com/longwater1234
- */
 
 package com.utc2.onlinelearning;
 
