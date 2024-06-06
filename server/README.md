@@ -72,17 +72,6 @@ for all Datetime fields**). Handle timezone conversion on your Frontend! For you
 - To maintain consistent time-zone (UTC) with your Java server, ensure your JDBC connection URL has
   parameter `connectionTimeZone=UTC`. See example below. For native @Query's, use UTC_TIMESTAMP() or UTC_DATE().
 
-### Redis v6.0 (or higher)
-
-This project uses Redis for 2 main tasks: Caching, and Storing login sessions. You can download latest Redis (macOS &
-Linux) from https://redis.io/download. Windows users may download the latest native installer (.msi)
-from [this GitHub repo](https://github.com/tporadowski/redis/releases). Alternatively, you could pull its official
-Docker image.
-Another option you could try is Redis Cloud at: https://redis.com/try-free/. Remember to replace Redis credentials
-inside application.yml (or in your ENV variables).
-
-| Tip 💡 | Redis now has an OFFICIAL cross-platform desktop GUI client: RedisInsight. Download it free [here](https://redis.com/redis-enterprise/redis-insight/) |
-
 ## Quick Start 🚀
 
 ### With Maven (natively)
@@ -94,13 +83,6 @@ below. That's it! Server will be available at http://localhost:9000
 ./mvnw clean package
 java -jar target/wedemyserver.jar
 ```
-
-## Deploying your App 🌍
-
-This App can be easily deployed within few minutes, straight from GitHub to your Cloud PaaS of choice. You can either
-use the [Dockerfile](Dockerfile) provided, or natively as a pure Java app. Popular PaaS with CI/CD for Java
-include: Heroku, AWS ElasticBeanstalk, Google App Engine, Azure Web Apps. The following may **require** a Dockerfile:
-Dokku, Railway, Render.com, Fly.io. Please note, you will also need a **separate** MySQL & Redis instance!
 
 ## Payments Handling
 
