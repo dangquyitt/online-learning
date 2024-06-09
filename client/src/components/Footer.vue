@@ -31,7 +31,7 @@
     <div class="righty">
       <el-row>&copy; 2024, UTC2</el-row>
       <el-row>
-        <img src="@/assets/final_white.png" alt="logo" id="ft-logo" />
+        <img src="@/assets/logo_final_white.png" alt="logo" id="ft-logo" />
       </el-row>
       <el-row class="credit-cards" title="Supported Payment methods">
         <img height="30" alt="visa" src="https://shoplineimg.com/assets/footer/card_visa.png" />

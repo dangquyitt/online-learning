@@ -205,7 +205,7 @@ const submitToServer = async (payload: typeof signupForm) => {
 };
 
 function redirectToLogin() {
-  ElMessage.success("Welcome to Wedemy. Please Login");
+  ElMessage.success("Welcome to Online Learning. Please Login");
   setTimeout(() => {
     router.replace("/login");
     window.location.reload();

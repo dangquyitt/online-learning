@@ -1,5 +1,5 @@
 <h1>
-<div align="center"><img src="src/assets/logo_final_purple.png" alt="wedemy-logo"/> </div>
+<div align="center"><img src="src/assets/logo_final_purple.png" alt="Online-Learning-Logo"/> </div>
 <div>Online Learning</div>
 </h1>
 
@@ -48,5 +48,5 @@ variables on your target Cloud platform.
 ## Pull Requests & Contributions
 
 Contributions, issues and feature requests are welcome!
-Feel free to check [issues page](https://github.com//Longwater1234/WedemyClient/issues). For more TODO's for this
+Feel free to check [issues page](https://github.com/dangquyitt/online-learning/issues). For more TODO's for this
 project, see list in [CONTRIBUTING.md](CONTRIBUTING.md)
