@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div class="main-view">
     <h3>{{ singleCourse.title }}</h3>
@@ -85,7 +84,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { Course, Review } from "@/interfaces/wedemy";
+import type { Course, Review } from "@/interfaces/online-learning";
 import type { CustomLesson, VideoRequest, VideoResponse, WatchStatus } from "@/interfaces/custom";
 import CourseService from "@/service/CourseService";
 import EnrollService from "@/service/EnrollService";
@@ -141,7 +140,7 @@ function getPlayLink(obj: VideoRequest) {
 function fetchSingleCourse(courseId: number) {
   CourseService.getById(courseId).then(res => {
     Object.assign(singleCourse, res.data);
-    document.title = `Lecture | ${singleCourse.title} | Wedemy`;
+    document.title = `Lecture | ${singleCourse.title} | Online Learning`;
   });
 }
 

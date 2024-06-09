@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div class="home">
     <div class="banner-image">
@@ -84,7 +83,7 @@
 
 <script lang="ts" setup>
 import CourseService from "@/service/CourseService";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 import { Search } from "@element-plus/icons-vue";
 import { ElNotification } from "element-plus";
 import { onMounted, reactive, ref } from "vue";
@@ -136,7 +135,7 @@ function goToCategory(name: string) {
 }
 
 onMounted(() => {
-  document.title = "Home | Wedemy";
+  document.title = "Home | Online Learning";
   window.scrollTo(0, 0);
   fetchAllCourses();
 });

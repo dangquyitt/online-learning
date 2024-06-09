@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <h3 class="cart-header">My Profile</h3>
   <div class="main-view" style="height: 80vh" v-loading="isLoading">
@@ -60,7 +59,7 @@
 <script lang="ts" setup>
 import EnrollService from "@/service/EnrollService";
 import ProfileService from "@/service/ProfileService";
-import type { User } from "@/interfaces/wedemy";
+import type { User } from "@/interfaces/online-learning";
 import { ElMessage } from "element-plus";
 import { Edit } from "@element-plus/icons-vue";
 import { onMounted, reactive, ref } from "vue";
@@ -122,7 +121,7 @@ function goToCourse(id: number) {
 }
 
 onMounted(() => {
-  document.title = "My Profile | Wedemy";
+  document.title = "My Profile | Online Learning";
   getProfileInfo();
   getUserProgress();
 });

@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div class="widescreen">
     <h1 style="margin-top: 50px">¯\_(ツ)_/¯</h1>
@@ -21,7 +20,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "NotFound",
   setup() {
-    document.title = "404 Not Found | Wedemy";
+    document.title = "404 Not Found | Online Learning";
     return {};
   }
 });

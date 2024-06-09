@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div class="main-body">
     <h2 class="serif-head">{{ categoryName }} Courses</h2>
@@ -42,7 +41,7 @@
 
 <script lang="ts" setup>
 import CourseService from "@/service/CourseService";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 import { onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { handleApiError } from "@/util/http_util";
@@ -68,7 +67,7 @@ onMounted(() => {
   const { name } = route.params;
   categoryName.value = name ? name.toString() : "";
   fetchCoursesByCategory(categoryName.value);
-  document.title = `Courses in ${categoryName.value} | Wedemy`;
+  document.title = `Courses in ${categoryName.value} | Online Learning`;
 });
 
 watch([route], function () {
@@ -76,7 +75,7 @@ watch([route], function () {
   if (!newVal) return;
   categoryName.value = newVal.toString();
   fetchCoursesByCategory(categoryName.value);
-  document.title = `Courses in ${categoryName.value} | Wedemy`;
+  document.title = `Courses in ${categoryName.value} | Online Learning`;
 });
 </script>
 

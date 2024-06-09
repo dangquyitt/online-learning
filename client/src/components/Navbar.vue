@@ -4,7 +4,7 @@
     <el-row :gutter="20" justify="space-around">
       <Drawer />
       <div class="logo-area" @click="goToHome">
-        <img src="@/assets/logo_final_purple.png" alt="Wedemy" class="mylogo" />
+        <img src="@/assets/logo_final_purple.png" alt="Online Learning" class="mylogo" />
       </div>
       <!-- end logo -->
 

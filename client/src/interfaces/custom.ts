@@ -1,4 +1,4 @@
-import type { Lesson, Review } from "@/interfaces/wedemy";
+import type { Lesson, Review } from "@/interfaces/online-learning";
 
 export interface LoginRequest {
   email: string;

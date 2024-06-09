@@ -1,5 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
-<template>
   <div class="widescreen">
     <h1 style="margin-top: 50px">ಥ_ಥ</h1>
     <div class="error-num">500</div>
@@ -20,7 +18,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    document.title = "500 Internal Server Error | Wedemy";
+    document.title = "500 Internal Server Error | Online Learning";
     return {};
   }
 });

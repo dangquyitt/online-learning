@@ -1,4 +1,3 @@
-
 <template>
   <h3 class="cart-header">My Cart ({{ totalElements }})</h3>
 
@@ -63,7 +62,7 @@ import CartService from "@/service/CartService";
 import CartSummary from "@/components/CartSummary.vue";
 import MobileSummary from "@/components/MobileSummary.vue";
 import { useStudentStore } from "@/stores";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 import { handleApiError } from "@/util/http_util";
 
 const store = useStudentStore();
@@ -107,7 +106,7 @@ function handleSuccessCart() {
 }
 
 onMounted(() => {
-  document.title = "Cart | Wedemy";
+  document.title = "Cart | Online Learning";
   store.getIsLoggedIn && fetchCartItems(0);
 });
 

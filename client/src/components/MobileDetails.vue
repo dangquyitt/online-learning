@@ -34,7 +34,7 @@ import { computed, reactive, ref } from "vue";
 import { ArrowRight } from "@element-plus/icons-vue";
 import type { PropType } from "vue";
 import { ElMessage } from "element-plus";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 import { useStudentStore } from "@/stores";
 import { useRouter } from "vue-router";
 

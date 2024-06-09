@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div align="center" style="height: 80vh">
     <div class="loginContainer">
@@ -105,7 +104,7 @@ import { handleApiError } from "@/util/http_util";
 import { useRouter } from "vue-router";
 // import VueHcaptcha from "@hcaptcha/vue3-hcaptcha";
 
-document.title = "SignUp | Wedemy";
+document.title = "SignUp | Online Learning";
 
 const signupFormRef = ref<FormInstance>();
 const router = useRouter();

@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <h3 class="cart-header">My wishlist ({{ wishlistCount }})</h3>
 
@@ -56,7 +55,7 @@ import { ElNotification } from "element-plus";
 import { computed, onMounted, ref, watch } from "vue";
 import { useStudentStore } from "@/stores";
 import { handleApiError } from "@/util/http_util";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 
 const store = useStudentStore();
 
@@ -92,7 +91,7 @@ function handleSuccessWishlist() {
 }
 
 onMounted(() => {
-  document.title = "Wishlist | Wedemy";
+  document.title = "Wishlist | Online Learning";
   store.getIsLoggedIn && fetchWishlist(0);
 });
 

@@ -18,7 +18,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "About",
   setup() {
-    document.title = "About | Wedemy";
+    document.title = "About | Online Learning";
     return {};
   }
 });

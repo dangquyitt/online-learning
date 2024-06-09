@@ -1,7 +1,7 @@
 import type { AxiosRequestConfig } from "axios";
 import { httpUtil } from "@/util/http_util";
 import type { LoginRequest } from "@/interfaces/custom";
-import type { User } from "@/interfaces/wedemy";
+import type { User } from "@/interfaces/online-learning";
 
 class AuthService {
   /** Login using custom JSON login */

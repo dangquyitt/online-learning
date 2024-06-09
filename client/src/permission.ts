@@ -1,6 +1,7 @@
 import router from "./router";
 import { useStudentStore } from "@/stores";
 
+// 对于这些，不要检查登录
 const WHITE_LIST: string[] = ["/404", "/500", "/", "/login", "/signup"];
 
 router.beforeEach(async (to, from, next) => {

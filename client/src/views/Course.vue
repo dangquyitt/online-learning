@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div v-loading.fullscreen.lock="isLoading" class="darkBox">
     <el-alert class="errorBox" v-if="errorMessage.length" :title="errorMessage" type="error" :closable="false">
@@ -127,7 +126,7 @@ import EnrollService from "@/service/EnrollService";
 import ReviewService from "@/service/ReviewService";
 import WishlistService from "@/service/WishlistService";
 import CartService from "@/service/CartService";
-import type { Course, Lesson } from "@/interfaces/wedemy";
+import type { Course, Lesson } from "@/interfaces/online-learning";
 import CourseDetails from "@/components/CourseDetails.vue";
 import { ElNotification } from "element-plus";
 import ReviewCard from "@/components/ReviewCard.vue";
@@ -137,7 +136,7 @@ import { handleApiError } from "@/util/http_util";
 import { useStudentStore } from "@/stores";
 import { useRoute } from "vue-router";
 
-document.title = "Course | Wedemy";
+document.title = "Course | Online Learning";
 
 const store = useStudentStore();
 const route = useRoute();
@@ -165,7 +164,7 @@ function fetchSingleCourse(courseId: number) {
     .then(res => {
       Object.assign(singleCourse, res.data);
       fetchReviewList(courseId, 0);
-      document.title = `${singleCourse.title} | Wedemy`;
+      document.title = `${singleCourse.title} | Online Learning`;
     })
     .catch(error => (errorMessage.value = error.message))
     .finally(() => (isLoading.value = false));

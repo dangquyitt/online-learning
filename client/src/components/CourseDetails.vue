@@ -5,6 +5,7 @@
         <img :src="props.singleCourse?.thumbUrl" class="small-img" :alt="singleCourse?.title" />
       </div>
       <h1>${{ singleCourse.price }}</h1>
+
       <!-- IF NOT OWN COURSE, show CART + WISHLIST Btn -->
       <div v-if="!isOwned" class="btn-block">
         <!-- CART BUTTON -->
@@ -57,7 +58,7 @@ import type { PropType } from "vue";
 import { ElMessage } from "element-plus";
 import { useStudentStore } from "@/stores";
 import { useRouter } from "vue-router";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 
 const isLoading = ref(false);
 const btnTitle = reactive(["Add to Wishlist", "Remove from Wishlist"]);

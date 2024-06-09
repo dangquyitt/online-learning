@@ -1,8 +1,7 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div align="center" style="height: 80vh">
     <div class="loginContainer">
-      <h3 class="loginHeader">Login to your Wedemy Account</h3>
+      <h3 class="loginHeader">Login to your Online Learning Account</h3>
 
       <!-- GOOGLE SIGN IN, SEE DOCS  -->
       <!-- https://developers.google.com/identity/gsi/web/guides/display-button -->
@@ -85,7 +84,7 @@ import type { FormInstance, FormRules } from "element-plus";
 import { useStudentStore } from "@/stores";
 import type { LoginRequest, UserDto } from "@/interfaces/custom";
 
-document.title = "Login | Wedemy";
+document.title = "Login | Online Learning";
 
 const loginFormRef = ref<FormInstance>();
 const store = useStudentStore();

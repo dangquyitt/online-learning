@@ -1,6 +1,6 @@
 import type { AxiosRequestConfig } from "axios";
 import { httpUtil } from "@/util/http_util";
-import type { Review } from "@/interfaces/wedemy";
+import type { Review } from "@/interfaces/online-learning";
 import type { SortParam } from "@/interfaces/custom";
 
 class ReviewService {

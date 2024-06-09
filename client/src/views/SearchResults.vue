@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <div style="height: 80vh">
     <h2 class="most-pop">{{ numOfResults }} results for '{{ decodeURI(searchQuery) }}'</h2>
@@ -56,7 +55,7 @@
 
 <script lang="ts" setup>
 import CourseService from "@/service/CourseService";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 import { computed, onBeforeUnmount, onMounted, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { handleApiError } from "@/util/http_util";
@@ -86,7 +85,7 @@ function fetchCoursesByTitle(title: string) {
 }
 
 onMounted(() => {
-  document.title = "Search Results | Wedemy";
+  document.title = "Search Results | Online Learning";
   window.scrollTo(0, 0);
   const { q } = route.query;
   searchQuery.value = q ? q.toString() : "";

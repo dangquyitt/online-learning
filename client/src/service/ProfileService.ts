@@ -1,5 +1,5 @@
 import { httpUtil } from "@/util/http_util";
-import type { User } from "@/interfaces/wedemy";
+import type { User } from "@/interfaces/online-learning";
 
 class ProfileService {
   /** get logged in user's summary */

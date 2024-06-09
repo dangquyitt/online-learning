@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <h3 class="cart-header">Checkout</h3>
   <el-alert type="warning" center effect="dark">
@@ -55,7 +54,7 @@ import CheckoutService from "@/service/CheckoutService";
 import { ElMessage } from "element-plus";
 import dropin, { type Dropin } from "braintree-web-drop-in";
 import CartService from "@/service/CartService";
-import type { Course } from "@/interfaces/wedemy";
+import type { Course } from "@/interfaces/online-learning";
 
 import type { AxiosResponse } from "axios";
 import { handleApiError } from "@/util/http_util";

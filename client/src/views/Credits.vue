@@ -40,7 +40,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "Credits",
   setup() {
-    document.title = "Credits | Wedemy";
+    document.title = "Credits | Online Learning";
     return {};
   }
 });

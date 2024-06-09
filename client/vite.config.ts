@@ -17,8 +17,8 @@ export default defineConfig({
         enabled: false
       },
       manifest: {
-        name: "Wedemy",
-        short_name: "Wedemy",
+        name: "OnlineLearning",
+        short_name: "OnlineLearning",
         id: "/",
         description: "An e-learning platform",
         start_url: "/",

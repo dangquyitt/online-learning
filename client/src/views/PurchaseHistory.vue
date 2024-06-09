@@ -1,4 +1,3 @@
-<!-- Copyright (c) 2022. Davis Tibbz. Github: https://github.com/longwater1234. MIT License  -->
 <template>
   <h3 class="cart-header">My Purchase History</h3>
   <div class="main-view" style="height: 70vh" v-loading="isLoading">
@@ -57,7 +56,7 @@
 
 <script lang="ts" setup>
 import EnrollService from "@/service/EnrollService";
-import type { Course, Sale } from "@/interfaces/wedemy";
+import type { Course, Sale } from "@/interfaces/online-learning";
 import { InfoFilled } from "@element-plus/icons-vue";
 import { onMounted, ref } from "vue";
 
@@ -91,7 +90,7 @@ const handleView = (id: string) => {
 };
 
 onMounted(() => {
-  document.title = "Purchase History | Wedemy";
+  document.title = "Purchase History | Online Learning";
   fetchMyPurchaseHistory();
 });
 </script>
