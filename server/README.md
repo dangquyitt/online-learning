@@ -81,7 +81,7 @@ below. That's it! Server will be available at http://localhost:9000
 
 ```bash
 ./mvnw clean package
-java -jar target/wedemyserver.jar
+java -jar target/onlinelearning.jar
 ```
 
 ## Payments Handling

@@ -1,5 +1,5 @@
 # All entries in ${CURLY_BRACES} should be set as ENV variables, for security reasons.
-# Learn more: https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html
+# Learn more: https://docs.spring.io/spring-boot/appendix/application-properties/index.html
 frontend:
   root:
     url: ${FRONTEND_ROOT_URL} #TODO Replace with your frontend root URL / empty string
@@ -7,7 +7,7 @@ logging:
   level:
     org:
       hibernate:
-        SQL: debug
+        SQL: info
 server:
   error:
     include-stacktrace: never
@@ -30,6 +30,7 @@ spring:
     url: ${MYSQL_HOST}
     username: ${MYSQL_USERNAME}
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: update
     properties:
@@ -39,6 +40,7 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
         jdbc:
           batch-size: 20
+        format_sql: true
   cache:
     type: redis
     redis:
@@ -62,6 +64,6 @@ spring:
   jackson:
     date-format: "yyyy-MM-dd HH:mm:ss"
 ## ENABLE SWAGGER-UI (disable in PROD)
-#springdoc:
-#  swagger-ui:
-#    enabled: false
+spring-doc:
+  swagger-ui:
+    enabled: true
