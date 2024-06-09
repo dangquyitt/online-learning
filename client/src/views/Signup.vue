@@ -3,27 +3,12 @@
     <div class="loginContainer">
       <h3 class="loginHeader">Sign Up and Start Learning!</h3>
 
-      <!-- GOOGLE SIGN UP  -->
-      <!-- https://developers.google.com/identity/gsi/web/guides/display-button -->
-      <div
-        id="g_id_onload"
-        :data-client_id="GOOGLE_CLIENT_ID"
-        data-context="signup"
-        data-ux_mode="popup"
-        :data-login_uri="SERVER_ROOT + '/oauth2/authorization/google'"
-        data-auto_prompt="false"
-      ></div>
-
-      <div
-        class="g_id_signin"
-        data-type="standard"
-        data-shape="rectangular"
-        data-theme="outline"
-        data-text="signup_with"
-        data-size="large"
-        data-logo_alignment="left"
-      ></div>
-      <!-- END OF GOOGLE BUTTON -->
+      <div>
+        <el-button @click="handleClickLoginGoogle" style="width: 100%"
+          ><img style="max-width: 32px; max-height: 32px; margin-right: 5px" src="@/assets/google-logo.png" />Sign up
+          with google</el-button
+        >
+      </div>
 
       <!-- START SIGNUP FORM -->
       <el-form @submit.prevent="handleSignup" status-icon :model="signupForm" :rules="rules" ref="signupFormRef">
@@ -170,12 +155,11 @@ const rules = reactive<FormRules>({
 
 const isLoading = ref(false);
 
-const GOOGLE_CLIENT_ID = computed(() => {
-  return import.meta.env.VITE_APP_GOOGLE_CLIENT_ID;
-});
-const SERVER_ROOT = computed(() => {
-  return import.meta.env.VITE_APP_BACKEND_ROOT_URL;
-});
+const handleClickLoginGoogle = (e: any) => {
+  e.preventDefault();
+  e.stopPropagation();
+  window.location.href = import.meta.env.VITE_APP_BACKEND_ROOT_URL + "/oauth2/authorization/google";
+};
 
 function handleSignup() {
   signupFormRef.value?.validate(valid => {
@@ -211,19 +195,6 @@ function redirectToLogin() {
     window.location.reload();
   }, 500);
 }
-
-onMounted(() => {
-  //attach GoogleAuth script
-  const scripta = document.createElement("script");
-  scripta.src = "https://accounts.google.com/gsi/client";
-  scripta.id = "google_client";
-  document.getElementById("g-login")?.appendChild(scripta); //see index.html
-});
-
-onBeforeUnmount(() => {
-  //detach above script
-  document.getElementById("google_client")?.remove();
-});
 </script>
 
 <style>

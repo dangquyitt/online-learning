@@ -15,6 +15,7 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(ElementPlus);
 app.use(YoutubeIframe);
+
 app.use(router);
 
 //Redirect if 500 Server Error occurs
